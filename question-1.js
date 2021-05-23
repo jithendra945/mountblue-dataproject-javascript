@@ -1,15 +1,14 @@
 /*
-fetch('http://0.0.0.0:8000/indian-population.json', { mode: 'cors',  credentials: 'same-origin', })
-.then(response => {
-   return response;
-})
-.then(data => console.log(data));
+fetch('https://jithendra-project-javascript.herokuapp.com/datasets/json/indian-population.json')
+  .then(response => response.json())
+  .then(data => console.log(data))
+
 */
 var india_data = [["2005", 1144118], ["2006", 1161977], ["2007", 1179681], ["2008", 1197146], ["2009", 1214270], ["2010", 1230980], ["2011", 1247236], ["2012", 1263065], ["2013", 1278562], ["2014", 1293859], ["2015", 1309053]];
 
 
 $(document).ready( function() {
-    Highcharts.chart('highchart-graph', {
+    Highcharts.chart('highchart-graph-1', {
         chart: {
             type: 'column'
         },
