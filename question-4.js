@@ -25,6 +25,12 @@ function to_population(country_population) {
 }
 
 
+years = [
+         "2005", "2006", "2007",
+         "2008", "2009", "2010",
+         "2011", "2012", "2013", "2014"
+        ];
+
 total_asean_url_local = 'http://0.0.0.0:8000/datasets/json/total-asean-population.json'
 total_asean_url_heroku = 'https://jithendra-project-javascript.herokuapp.com/datasets/json/total-asean-population.json';
 
@@ -51,7 +57,7 @@ $(document).ready(function () {
                     text: 'Source: WorldClimate.com'
                 },
                 xAxis: {
-                    categories: countries,
+                    categories: years,
                     crosshair: true
                 },
                 yAxis: {
