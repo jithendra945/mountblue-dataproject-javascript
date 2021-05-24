@@ -1,11 +1,9 @@
 
-
-var year_population = [["2005", 1144118], ["2006", 1161977], ["2007", 1179681], ["2008", 1197146], ["2009", 1214270], ["2010", 1230980], ["2011", 1247236], ["2012", 1263065], ["2013", 1278562], ["2014", 1293859], ["2015", 1309053]];
-
-url = 'https://jithendra-project-javascript.herokuapp.com/datasets/json/indian-population.json';
+url_local = 'http://0.0.0.0:8000/datasets/json/indian-population.json'
+url_heroku = 'https://jithendra-project-javascript.herokuapp.com/datasets/json/indian-population.json';
 
 $(document).ready(function () {
-    fetch(url).then((response) => {
+    fetch(url_heroku).then((response) => {
         if (response.ok) {
             return response.json();
         } else {
