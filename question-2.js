@@ -1,5 +1,4 @@
 
-
 asean_url_local = 'http://0.0.0.0:8000/datasets/json/asean-population.json'
 asean_url_heroku = 'https://jithendra-project-javascript.herokuapp.com/datasets/json/asean-population.json';
 
