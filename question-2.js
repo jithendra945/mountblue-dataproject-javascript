@@ -1,19 +1,17 @@
 
 
-url_local = 'http://0.0.0.0:8000/datasets/json/asean-population.json'
-url_heroku = 'https://jithendra-project-javascript.herokuapp.com/datasets/json/asean-population.json';
+asean_url_local = 'http://0.0.0.0:8000/datasets/json/asean-population.json'
+asean_url_heroku = 'https://jithendra-project-javascript.herokuapp.com/datasets/json/asean-population.json';
 
 $(document).ready(function () {
-    fetch(url_heroku).then((response) => {
+    fetch(asean_url_heroku).then((response) => {
         if (response.ok) {
             return response.json();
         } else {
             throw new Error('Something went wrong');
         }
     })
-        .then((responseJson) => {
-            // Do something with the response
-
+        .then((asean_responseJson) => {
             Highcharts.chart('highchart-graph-2', {
                 chart: {
                     type: 'column'
@@ -51,7 +49,7 @@ $(document).ready(function () {
                 },
                 series: [{
                     name: 'Population',
-                    data: responseJson,
+                    data: asean_responseJson,
                     dataLabels: {
                         enabled: true,
                         rotation: 0,

@@ -1,18 +1,16 @@
 
-url_local = 'http://0.0.0.0:8000/datasets/json/total-saarc-population.json'
-url_heroku = 'https://jithendra-project-javascript.herokuapp.com/datasets/json/total-saarc-population.json';
+saarc_url_local = 'http://0.0.0.0:8000/datasets/json/total-saarc-population.json'
+saarc_url_heroku = 'https://jithendra-project-javascript.herokuapp.com/datasets/json/total-saarc-population.json';
 
 $(document).ready(function () {
-    fetch(url_heroku).then((response) => {
+    fetch(saarc_url_heroku).then((response) => {
         if (response.ok) {
             return response.json();
         } else {
             throw new Error('Something went wrong');
         }
     })
-        .then((responseJson) => {
-            // Do something with the response
-
+        .then((saarc_responseJson) => {
             Highcharts.chart('highchart-graph-3', {
                 chart: {
                     type: 'column'
@@ -50,7 +48,7 @@ $(document).ready(function () {
                 },
                 series: [{
                     name: 'Population',
-                    data: responseJson,
+                    data: saarc_responseJson,
                     dataLabels: {
                         enabled: true,
                         rotation: -90,
