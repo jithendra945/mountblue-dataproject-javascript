@@ -1,9 +1,8 @@
 
-saarc_url_local = 'http://0.0.0.0:8000/datasets/json/total-saarc-population.json'
-saarc_url_heroku = 'https://jithendra-project-javascript.herokuapp.com/datasets/json/total-saarc-population.json';
+saarc_url = '/datasets/json/total-saarc-population.json';
 
 $(document).ready(function () {
-    fetch(saarc_url_heroku).then((response) => {
+    fetch(saarc_url).then((response) => {
         if (response.ok) {
             return response.json();
         } else {

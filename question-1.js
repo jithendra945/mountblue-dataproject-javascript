@@ -1,9 +1,8 @@
 
-indian_url_local = 'http://0.0.0.0:8000/datasets/json/indian-population.json'
-indian_url_heroku = 'https://jithendra-project-javascript.herokuapp.com/datasets/json/indian-population.json';
+indian_url = '/datasets/json/indian-population.json';
 
 $(document).ready(function () {
-    fetch(indian_url_heroku).then((response) => {
+    fetch(indian_url).then((response) => {
         if (response.ok) {
             return response.json();
         } else {

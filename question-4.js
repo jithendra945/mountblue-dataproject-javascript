@@ -31,12 +31,11 @@ years = [
          "2011", "2012", "2013", "2014"
         ];
 
-total_asean_url_local = 'http://0.0.0.0:8000/datasets/json/total-asean-population.json'
-total_asean_url_heroku = 'https://jithendra-project-javascript.herokuapp.com/datasets/json/total-asean-population.json';
+total_asean_url= '/datasets/json/total-asean-population.json';
 
 
 $(document).ready(function () {
-    fetch(total_asean_url_heroku).then((response) => {
+    fetch(total_asean_url).then((response) => {
         if (response.ok) {
             return response.json();
         } else {
