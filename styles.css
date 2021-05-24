@@ -4,16 +4,7 @@
     margin: 1em auto;
 }
 
-#highchart-graph-1 {
-    height: 400px;
-}
-#highchart-graph-2 {
-    height: 400px;
-}
-#highchart-graph-3 {
-    height: 400px;
-}
-#highchart-graph-4 {
+.height400 {
     height: 400px;
 }
 

@@ -1,4 +1,4 @@
-
+/* url to fetch json location */
 indian_url = '/datasets/json/indian-population.json';
 
 $(document).ready(function () {

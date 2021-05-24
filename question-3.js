@@ -1,4 +1,4 @@
-
+/* url to fetch json location */
 saarc_url = '/datasets/json/total-saarc-population.json';
 
 $(document).ready(function () {

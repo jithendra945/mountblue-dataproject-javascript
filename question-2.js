@@ -1,4 +1,4 @@
-
+/* url to fetch json location */
 asean_url = '/datasets/json/asean-population.json';
 
 $(document).ready(function () {

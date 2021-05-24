@@ -1,7 +1,8 @@
-
+/* Extracting countries from JSON */
 function to_countries(country_population) {
     var data = JSON.parse(JSON.stringify(country_population));
     keys = Object.keys(data);
+    /* Changing counter names to shorter ones */
     for (i = 0; i < keys.length; i++) {
         if (keys[i] == "Brunei Darussalam") {
             keys[i] = "Brunei"
@@ -13,6 +14,7 @@ function to_countries(country_population) {
     return keys;
 }
 
+/* Extracting population data from JSON */
 function to_population(country_population) {
     var data = JSON.parse(JSON.stringify(country_population));
     keys = Object.keys(data);
@@ -24,15 +26,15 @@ function to_population(country_population) {
     return converted_data;
 }
 
-
+/* Years for x-axis labels */
 years = [
          "2005", "2006", "2007",
          "2008", "2009", "2010",
          "2011", "2012", "2013", "2014"
         ];
 
+/* url to fetch json location */
 total_asean_url= '/datasets/json/total-asean-population.json';
-
 
 $(document).ready(function () {
     fetch(total_asean_url).then((response) => {
@@ -43,7 +45,7 @@ $(document).ready(function () {
         }
     })
         .then((total_asean_responseJson) => {
-            countries = to_countries(total_asean_responseJson);
+            countries = to_countries(total_asean_responseJson); 
             population = to_population(total_asean_responseJson);
             Highcharts.chart('highchart-graph-4', {
                 chart: {
