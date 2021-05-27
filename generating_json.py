@@ -31,7 +31,7 @@ def indian_population():
                 india[row['Year']] = int(float(row['Population']))
 
     # formatting data accordingly
-    data = [[i, india[i]] for i in india]
+    data = [[year, india[year]] for year in india]
 
     # duming data in JSON file
     with open('datasets/json/indian-population.json', 'w') as json_file:
@@ -63,7 +63,7 @@ def asean_population():
             asean_list[key] = "Laos"
 
     # formatting data accordingly
-    data = [[x, y] for x, y in zip(asean_list, population)]
+    data = [[country, pop] for country, pop in zip(asean_list, population)]
 
     # duming data in JSON file
     with open('datasets/json/asean-population.json', 'w') as json_file:
@@ -93,7 +93,7 @@ def total_saarc_population():
                 saarc[row['Year']] += int(float(row['Population']))
 
     # formatting data accordingly
-    data = [[i, saarc[i]] for i in saarc]
+    data = [[year, saarc[year]] for year in saarc]
 
     # duming data in JSON file
     with open('datasets/json/total-saarc-population.json', 'w') as json_file:
